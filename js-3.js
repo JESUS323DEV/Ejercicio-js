@@ -287,6 +287,7 @@ btnReiniciar.addEventListener("click", function () {
     textoRapido.textContent = "";
     btnLanzarMoneda.disabled = false; // desbloquear botón
     btnReiniciar.style.display = "none"; // ocultar reinicio
+    imgMoneda.src = "cara-euro.png"; // 👈 forzar que vuelva a tener una imagen
 
     // mostrar radios otra vez
     document.querySelector(".opciones").style.display = "block";

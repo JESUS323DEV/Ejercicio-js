@@ -268,7 +268,6 @@ btnLanzarMoneda.addEventListener("click", function () {
         }
 
         // esconder moneda y bloquear el botón de jugar
-        imgMoneda.style.display = "none";
         document.querySelector(".opciones").style.display = "none";
         btnLanzarMoneda.disabled = true;
 
@@ -282,12 +281,9 @@ btnLanzarMoneda.addEventListener("click", function () {
 
 // botón de reiniciar
 btnReiniciar.addEventListener("click", function () {
-    // resetear estado
-    imgMoneda.style.display = "block"; // vuelve a aparecer
     textoRapido.textContent = "";
     btnLanzarMoneda.disabled = false; // desbloquear botón
     btnReiniciar.style.display = "none"; // ocultar reinicio
-    imgMoneda.src = "cara-euro.png"; // 👈 forzar que vuelva a tener una imagen
 
     // mostrar radios otra vez
     document.querySelector(".opciones").style.display = "block";

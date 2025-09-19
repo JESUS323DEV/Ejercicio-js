@@ -29,3 +29,27 @@ img {
 
     display: none;
 }
+
+body {
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
+    color: #0ff;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+}
+
+button {
+    background: #111;
+    border: 2px solid #0ff;
+    color: #0ff;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: inherit;
+    box-shadow: 0 0 10px #0ff;
+}
+
+button:hover {
+    background: #0ff;
+    color: #111;
+    box-shadow: 0 0 20px #0ff;
+}

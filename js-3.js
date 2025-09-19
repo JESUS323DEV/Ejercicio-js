@@ -233,14 +233,12 @@ let btnLanzarMoneda = document.querySelector(".btnLanzarMoneda");
 let btnReiniciar = document.querySelector(".btnReiniciar");
 let imgMoneda = document.querySelector(".imgMoneda");
 let textoRapido = document.querySelector(".textoRapido");
-let resetCoin;
+
 // BOTÓN LANZAR MONEDA + FUNCTION 
 btnLanzarMoneda.addEventListener("click", function () {
-
     // Leo la elección del jugador
     let eleccion = document.querySelector("input[name='eleccion']:checked");
     if (!eleccion) {
-
         textoRapido.textContent = "⚠️ Tienes que elegir Cara o Sello primero.";
         return;
     }
@@ -252,45 +250,36 @@ btnLanzarMoneda.addEventListener("click", function () {
         // Lanza moneda
         let lanzarMoneda = Math.floor(Math.random() * 2);
         let salida = (lanzarMoneda === 0) ? "cara" : "sello";
+
         // Cambia imagen
-        imgMoneda.src = salida === "cara" ? "cara-euro.png" : "sello-euro.png"
+        imgMoneda.src = salida === "cara" ? "cara-euro.png" : "sello-euro.png";
 
-        //Verifica si ganó 
-
+        // Verifica si ganó 
         if (eleccion.value === salida) {
-
             textoRapido.textContent = " 🎉 ¡Ganaste! Salió " + salida;
-
-
         } else {
             textoRapido.textContent = "😢 Perdiste. Salió " + salida;
-
         }
 
-        // esconder moneda y bloquear el botón de jugar
+        // ocultar radios
         document.querySelector(".opciones").style.display = "none";
 
-
-        // mostrar el botón de reinicio
+        // mostrar botón de reinicio
         btnReiniciar.style.display = "inline-block";
-
-
     }, { once: true });
 });
 
 // botón de reiniciar
 btnReiniciar.addEventListener("click", function () {
     textoRapido.textContent = "";
-    btnLanzarMoneda.disabled = false; // desbloquear botón
     btnReiniciar.style.display = "none"; // ocultar reinicio
-
-    // mostrar radios otra vez
-    document.querySelector(".opciones").style.display = "block";
+    document.querySelector(".opciones").style.display = "block"; // mostrar radios otra vez
 
     // desmarcar radios
     let radios = document.querySelectorAll("input[name='eleccion']");
     radios.forEach(radio => radio.checked = false);
 });
+
 
 
 

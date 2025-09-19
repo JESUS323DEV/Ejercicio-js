@@ -269,7 +269,6 @@ btnLanzarMoneda.addEventListener("click", function () {
 
         // esconder moneda y bloquear el botón de jugar
         document.querySelector(".opciones").style.display = "none";
-        btnLanzarMoneda.disabled = true;
 
 
         // mostrar el botón de reinicio

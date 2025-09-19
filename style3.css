@@ -1,0 +1,31 @@
+img {
+
+    width: 400px;
+}
+
+.imgMoneda {
+    display: block;
+    margin: 20px auto;
+    transform-origin: center;
+}
+
+.animar {
+    animation: girarMoneda 1s ease;
+}
+
+@keyframes girarMoneda {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(720deg);
+    }
+
+    /* 2 vueltas */
+}
+
+.oculto {
+
+    display: none;
+}

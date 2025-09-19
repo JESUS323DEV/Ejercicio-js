@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../JS-Basico3/style3.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center bg-body-secondary text-dark p-4">Prácticas con Js</h1>
+    </header>
+    <!--? ADIVINA EL NUMERO -->
+    <div class="container">
+        <div class="text-center">
+            <h3 class="fs-1 p-2">Adivina el número</h3>
+            <p class="fs-3 p-1">Hemos seleccionado un número aleatorio entre 1 y 100. Fíjate si lo puedes adivinar en 10
+                turnos o menos.
+                Vamos a
+                decirte si tu número es más alto o más bajo.</p>
+        </div>
+
+        <div class="d-flex flex-column align-items-center justify-content-center border ">
+            <div class="listaVacia p-2">
+                <p class="resultado"></p>
+                <p class="lastResultado"></p>
+                <p class="win"></p>
+
+            </div>
+
+            <label class="fs-2 p-2" for="guessField">Adivina el numero</label>
+            <div class="botones p-3">
+                <input type="text" id="guessField" class="guessField">
+                <input type="button" value="Enviar Respuesta" class="btnEnviar">
+            </div>
+        </div>
+    </div>
+
+
+    <!--? ADIVINA LA PALABRA -->
+    <div class="container text-center">
+        <h3 class="fs-1 mt-5 p-2">Adivina la palabra</h3>
+        <p class="fs-3  p-1">“Adivina la palabra secreta: escribe una letra en cada intento y descubre la palabra
+            antes de
+            quedarte sin
+            vidas.”</p>
+
+
+        <div class="border">
+            <div class="listaIntentos ">
+                <p class="progreso fs-1"></p>
+                <p class="resultadoWord fs-3"></p>
+            </div>
+
+            <label class="fs-1 labelWord p-3">Adivina la palabra</label>
+            <div class="btnProbarWord p-3">
+                <input type="text" maxlength="1" class="inputWord">
+                <input type="button" value="Probar Letra" class="btnProbar">
+            </div>
+
+        </div>
+    </div>
+
+    <!--? LANZAR MONEDA -->
+    <div class="container d-flex flex-column justify-content-center align-items-center border mt-5">
+        <h3 class="fs-1 p-2">Lanzar la moneda</h3>
+
+
+        <p class="textoRapido"></p>
+        <div class="d-flex flex-row gap-5 ">
+            <img class="img-fluid imgMoneda" src="../JS-Basico3/cara-euro.png" alt="">
+        </div>
+
+        <div class="text-center btnCoin d-flex flex-column">
+            <button class="btnLanzarMoneda">Lanzar Moneda</button>
+            <button class="btnReiniciar" style="display:none;">Reiniciar</button>
+        </div>
+        <div class="opciones">
+            <label>
+                <input type="radio" name="eleccion" value="cara"> Cara
+            </label>
+            <label>
+                <input type="radio" name="eleccion" value="sello"> Sello
+            </label>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../JS-Basico3/js-3.js"></script>
+</body>
+
+</html>

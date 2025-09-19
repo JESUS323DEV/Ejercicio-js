@@ -253,7 +253,7 @@ btnLanzarMoneda.addEventListener("click", function () {
         let lanzarMoneda = Math.floor(Math.random() * 2);
         let salida = (lanzarMoneda === 0) ? "cara" : "sello";
         // Cambia imagen
-        imgMoneda.src = salida === "cara" ? "/JS-Basico3/cara-euro.png" : "/JS-Basico3/sello-euro.png"
+        imgMoneda.src = salida === "cara" ? "cara-euro.png" : "sello-euro.png"
 
         //Verifica si ganó 
 
